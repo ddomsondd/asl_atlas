@@ -10,7 +10,7 @@ from utils import (
 page_bg_img = '''
 <style>
 .stApp {
-    background-image: url();
+    background-image: url("https://raw.githubusercontent.com/ddomsondd/asl_atlas/main/network_communications_banner_with_low_poly_design_0803.jpg");
     background-size: contain;
     background-position: center;
     background-attachment: fixed;
