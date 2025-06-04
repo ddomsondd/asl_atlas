@@ -10,7 +10,7 @@ from utils import (
 page_bg_img = '''
 <style>
 .stApp {
-    background-image: url("https://raw.githubusercontent.com/ddomsondd/asl_atlas/main/network_communications_banner_with_low_poly_design_0803.jpg");
+    background-image: url("https://raw.githubusercontent.com/ddomsondd/asl_atlas/main/background_pic.jpg");
     background-size: contain;
     background-position: center;
     background-attachment: fixed;
@@ -27,7 +27,7 @@ st.title("American Sign Language Recognition")
 
 
 st.sidebar.title("Wybierz model")
-option = st.sidebar.selectbox("Wybierz opcje", ["CNN", "MobileNet", "ResNet50 (PyTorch)", "EfficientNet"])
+option = st.sidebar.selectbox("Wybierz opcje", ["CNN", "MobileNet", "ResNet50 (PyTorch)", "EfficientNet (PyTorch)"])
 
 if option == "CNN":
     st.write("MODEL CNN")
@@ -70,7 +70,7 @@ elif option == "MobileNet":
                 col2.error("Niestety tym razem się nie udało :(")
 
 
-elif option == "ResNet50":
+elif option == "ResNet50 (PyTorch)":
     st.write("MODEL RESNET50")
 
     uploaded_file = st.file_uploader("Wprowadź zdjęcie")
