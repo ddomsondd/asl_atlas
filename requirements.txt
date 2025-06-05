@@ -1,9 +1,8 @@
-streamlit>=1.45.0,<1.46.0
-torch>=2.7.0,<2.8.0
-torchvision>=0.22.0,<0.23.0
-tensorflow-cpu>=2.19.0,<2.20.0
-efficientnet-pytorch>=0.7.1,<0.8.0
-mediapipe>=0.10.21,<0.11.0
-pillow>=10.4.0,<10.5.0
-numpy>=1.26.4,<1.27.0
-opencv-python
+torch==2.7.0+cu118
+torchvision==0.22.0+cu118
+streamlit==1.45.0
+tensorflow==2.19.0
+efficientnet-pytorch==0.7.1
+mediapipe==0.10.21
+Pillow==10.4.0
+numpy==1.26.4
