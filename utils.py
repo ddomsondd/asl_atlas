@@ -38,7 +38,7 @@ def classify_sign_cnn(image):
     predicted_class = np.argmax(predictions, axis=1)[0]
 
 
-    return class_names[predicted_class]
+    return predicted_class
 
 
 def classify_sign_mobilenet(image):
@@ -81,8 +81,7 @@ def classify_sign_efficientnet(image):
     image = Image.open(image).convert("RGB")
     image_tensor = transform(image).unsqueeze(0)
 
-    #MODEL_PATH = r"saved_models\EfficientNet\3_epochs\efficientnet_asl.pth"
-    MODEL_PATH = r"saved_models\EfficientNet\7_epochs\best_model_weights.pth"
+    MODEL_PATH = r"saved_models\EfficientNet\3_epochs\efficientnet_asl.pth"
     model = EfficientNet.from_pretrained('efficientnet-b0')
     model._fc = nn.Linear(model._fc.in_features, num_classes)
     model.load_state_dict(torch.load(MODEL_PATH, map_location='cpu'))
