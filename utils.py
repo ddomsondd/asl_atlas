@@ -42,7 +42,23 @@ def classify_sign_cnn(image):
 
 
 def classify_sign_mobilenet(image):
-    pass
+    MODEL_PATH = r"saved_models\mobilenet_sign_model.keras"
+
+    try:
+        model = tf.keras.models.load_model(MODEL_PATH)
+    except Exception as e:
+        print(f"Error loading MobileNet model: {e}")
+        return None
+
+    image = Image.open(image).convert("RGB")
+    image = image.resize((224, 224))  # MobileNetV2 standard size
+    image = np.array(image) / 255.0   # Normalize to [0, 1]
+    image = np.expand_dims(image, axis=0)  # Add batch dimension
+
+    predictions = model.predict(image)
+    predicted_class = np.argmax(predictions, axis=1)[0]
+
+    return class_names[predicted_class]
 
 def classify_sign_resnet50_pytorch(image):
     MODEL_PATH = r"saved_models\resnet50_asl_pytorch.pth"
