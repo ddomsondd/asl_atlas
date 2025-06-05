@@ -85,8 +85,8 @@ def classify_sign_resnet50_pytorch(image):
 
 
 def classify_sign_efficientnet(image):
-    mean = [0.5173, 0.4976, 0.5131]
-    std = [0.2046, 0.2340, 0.2418]
+    mean = [0.5187, 0.4988, 0.5147]     #[0.5173, 0.4976, 0.5131]
+    std = [0.2017, 0.2310, 0.2390]      #[0.2046, 0.2340, 0.2418]
 
     transform = transforms.Compose([
         transforms.Resize(size = (224,224)),
