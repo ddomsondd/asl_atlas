@@ -1,5 +1,5 @@
-torch==2.7.0+cu118
-torchvision==0.22.0+cu118
+torch==2.7.0
+torchvision==0.22.0
 streamlit==1.45.0
 tensorflow==2.19.0
 efficientnet-pytorch==0.7.1
