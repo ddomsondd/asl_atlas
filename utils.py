@@ -38,7 +38,7 @@ def classify_sign_cnn(image):
     predicted_class = np.argmax(predictions, axis=1)[0]
 
 
-    return predicted_class
+    return class_names[predicted_class]
 
 
 def classify_sign_mobilenet(image):
